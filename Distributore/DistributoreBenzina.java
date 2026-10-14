@@ -49,14 +49,14 @@ public class DistributoreBenzina{
 
             if(litri > this.deposito){
                 litri = this.deposito;
-                System.out.println("Attenzione: il distributore non ha abbastanza benzina.");
+               // System.out.println("Attenzione: il distributore non ha abbastanza benzina.");
             }
 
             unaAutomobile.addGas(litri);
             this.deposito = this.deposito - litri;
 
             double costo = litri * this.euroPerLitro;
-            System.out.println("Erogati " + litri + " litri, costo " + costo + " euro, resto " + (euro - costo) + " euro.");
+            //System.out.println("Erogati " + litri + " litri, costo " + costo + " euro, resto " + (euro - costo) + " euro.");
         }
     }
 
