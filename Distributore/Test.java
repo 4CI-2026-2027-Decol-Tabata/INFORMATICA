@@ -1,8 +1,8 @@
-import java.util.Scanner;
+import java.util.*;
 
 public class Test{
     public static void main(String[] args){
-        Scanner sc = new Scanner(System.in);
+        Scanner inp = new Scanner(System.in);
 
         DistributoreBenzina distributore = new DistributoreBenzina(1.85);
         distributore.rifornisci(100.0);
@@ -29,22 +29,22 @@ public class Test{
             switch(scelta){
                 case 1:
                     System.out.print("Quanti km vuoi fare? ");
-                    km = sc.nextDouble();
+                    km = inp.nextDouble();
                     auto1.drive(km);
                     break;
                 case 2:
                     System.out.print("Quanti euro di benzina? ");
-                    euro = sc.nextDouble();
+                    euro = inp.nextDouble();
                     distributore.vendi(euro, auto1);
                     break;
                 case 3:
                     System.out.print("Quanti litri vuoi rifornire al distributore? ");
-                    litri = sc.nextDouble();
+                    litri = inp.nextDouble();
                     distributore.rifornisci(litri);
                     break;
                 case 4:
                     System.out.print("Nuovo prezzo al litro: ");
-                    prezzo = sc.nextDouble();
+                    prezzo = inp.nextDouble();
                     distributore.aggiorna(prezzo);
                     break;
                 case 5:
@@ -58,6 +58,5 @@ public class Test{
                     System.out.println("Scelta non valida.");
             }
         }
-        sc.close();
     }
 }
