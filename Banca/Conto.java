@@ -33,7 +33,6 @@ public class Conto{
     }
 
     public void effettuaPagamento(Pagamento pagamento) throws SaldoInsufficienteException{
-    
         if(pagamento.getImporto() <= 0.0){
             throw new SaldoInsufficienteException("Importo non valido");
         }
@@ -41,9 +40,7 @@ public class Conto{
         if(this.saldo < pagamento.getImporto()){
             throw new SaldoInsufficienteException("Saldo insufficiente per pagare " + pagamento.getImporto()+"euro");
         }
-
+        
         this.saldo = saldo - pagamento.getImporto();
-
-        System.out.println("Pagamento a " + pagamento.getBeneficiario() + " di " + pagamento.getImporto() + " euro effettuato");
     }
 }
